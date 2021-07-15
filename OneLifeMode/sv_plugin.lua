@@ -55,9 +55,6 @@ function PLUGIN:PlayerDeath(client, inflictor, attacker)
 
 			    hook.Run("CharacterDeleted", character:GetPlayer(), id, isCurrentChar)
 
-			    client:Notify("Персонаж успешно удален.")
-			    character:GetPlayer():Notify("Вашего персонажа удалили.")
-
 			    if (isCurrentChar) then
 				    character:GetPlayer():SetNetVar("char", nil)
 				    character:GetPlayer():KillSilent()
